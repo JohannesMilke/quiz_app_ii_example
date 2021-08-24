@@ -2,16 +2,16 @@ name: quiz_app_ii_example
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.3
 
   # icons
-  font_awesome_flutter: ^8.11.0
+  font_awesome_flutter: ^9.1.0
 
 dev_dependencies:
   flutter_test:

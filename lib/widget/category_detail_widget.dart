@@ -6,9 +6,9 @@ class CategoryDetailWidget extends StatelessWidget {
   final ValueChanged<Category> onSelectedCategory;
 
   const CategoryDetailWidget({
-    Key key,
-    @required this.category,
-    @required this.onSelectedCategory,
+    Key? key,
+    required this.category,
+    required this.onSelectedCategory,
   }) : super(key: key);
 
   @override

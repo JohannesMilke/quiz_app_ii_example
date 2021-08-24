@@ -7,12 +7,12 @@ class Question {
   final List<Option> options;
   final String solution;
   bool isLocked;
-  Option selectedOption;
+  Option? selectedOption;
 
   Question({
-    @required this.text,
-    @required this.options,
-    @required this.solution,
+    required this.text,
+    required this.options,
+    required this.solution,
     this.isLocked = false,
     this.selectedOption,
   });

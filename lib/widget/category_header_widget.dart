@@ -7,8 +7,8 @@ class CategoryHeaderWidget extends StatelessWidget {
   final Category category;
 
   const CategoryHeaderWidget({
-    Key key,
-    @required this.category,
+    Key? key,
+    required this.category,
   }) : super(key: key);
 
   @override

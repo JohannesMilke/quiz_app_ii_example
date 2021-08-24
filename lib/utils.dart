@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Utils {
   static List<Widget> heightBetween(
     List<Widget> children, {
-    @required double height,
+    required double height,
   }) {
     if (children.isEmpty) return <Widget>[];
     if (children.length == 1) return children;

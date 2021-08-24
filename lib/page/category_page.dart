@@ -8,15 +8,15 @@ import 'package:quiz_app_ii_example/widget/questions_widget.dart';
 class CategoryPage extends StatefulWidget {
   final Category category;
 
-  const CategoryPage({Key key, @required this.category}) : super(key: key);
+  const CategoryPage({Key? key, required this.category}) : super(key: key);
 
   @override
   _CategoryPageState createState() => _CategoryPageState();
 }
 
 class _CategoryPageState extends State<CategoryPage> {
-  PageController controller;
-  Question question;
+  PageController? controller;
+  Question? question;
 
   @override
   void initState() {
@@ -28,7 +28,7 @@ class _CategoryPageState extends State<CategoryPage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: buildAppBar(context),
+        appBar: buildAppBar(context) as PreferredSizeWidget?,
         body: QuestionsWidget(
           category: widget.category,
           controller: controller,
@@ -67,18 +67,18 @@ class _CategoryPageState extends State<CategoryPage> {
       );
 
   void selectOption(Option option) {
-    if (question.isLocked) {
+    if (question!.isLocked) {
       return;
     } else {
       setState(() {
-        question.isLocked = true;
-        question.selectedOption = option;
+        question!.isLocked = true;
+        question!.selectedOption = option;
       });
     }
   }
 
-  void nextQuestion({int index, bool jump = false}) {
-    final nextPage = controller.page + 1;
+  void nextQuestion({int? index, bool jump = false}) {
+    final nextPage = controller!.page! + 1;
     final indexPage = index ?? nextPage.toInt();
 
     setState(() {
@@ -86,7 +86,7 @@ class _CategoryPageState extends State<CategoryPage> {
     });
 
     if (jump) {
-      controller.jumpToPage(indexPage);
+      controller!.jumpToPage(indexPage);
     }
   }
 }
