@@ -8,9 +8,9 @@ class OptionsWidget extends StatelessWidget {
   final ValueChanged<Option> onClickedOption;
 
   const OptionsWidget({
-    Key key,
-    @required this.question,
-    @required this.onClickedOption,
+    Key? key,
+    required this.question,
+    required this.onClickedOption,
   }) : super(key: key);
 
   @override
@@ -60,7 +60,7 @@ class OptionsWidget extends StatelessWidget {
         ]),
       );
 
-  Widget buildSolution(Option solution, Option answer) {
+  Widget buildSolution(Option? solution, Option answer) {
     if (solution == answer) {
       return Text(
         question.solution,

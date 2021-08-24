@@ -3,14 +3,14 @@ import 'package:quiz_app_ii_example/model/question.dart';
 
 class QuestionNumbersWidget extends StatelessWidget {
   final List<Question> questions;
-  final Question question;
+  final Question? question;
   final ValueChanged<int> onClickedNumber;
 
   const QuestionNumbersWidget({
-    Key key,
-    @required this.questions,
-    @required this.question,
-    @required this.onClickedNumber,
+    Key? key,
+    required this.questions,
+    required this.question,
+    required this.onClickedNumber,
   }) : super(key: key);
 
   @override
@@ -35,8 +35,8 @@ class QuestionNumbersWidget extends StatelessWidget {
   }
 
   Widget buildNumber({
-    @required int index,
-    @required bool isSelected,
+    required int index,
+    required bool isSelected,
   }) {
     final color = isSelected ? Colors.orange.shade300 : Colors.white;
 

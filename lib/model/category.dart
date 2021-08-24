@@ -13,9 +13,9 @@ class Category {
   final String imageUrl;
 
   Category({
-    @required this.imageUrl,
-    @required this.questions,
-    @required this.categoryName,
+    required this.imageUrl,
+    required this.questions,
+    required this.categoryName,
     this.description = '',
     this.backgroundColor = Colors.orange,
     this.icon = FontAwesomeIcons.question,

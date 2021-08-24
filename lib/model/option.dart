@@ -7,8 +7,8 @@ class Option {
   final bool isCorrect;
 
   const Option({
-    @required this.text,
-    @required this.code,
-    @required this.isCorrect,
+    required this.text,
+    required this.code,
+    required this.isCorrect,
   });
 }

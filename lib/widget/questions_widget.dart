@@ -6,16 +6,16 @@ import 'package:quiz_app_ii_example/widget/options_widget.dart';
 
 class QuestionsWidget extends StatelessWidget {
   final Category category;
-  final PageController controller;
+  final PageController? controller;
   final ValueChanged<int> onChangedPage;
   final ValueChanged<Option> onClickedOption;
 
   const QuestionsWidget({
-    Key key,
-    @required this.category,
-    @required this.controller,
-    @required this.onChangedPage,
-    @required this.onClickedOption,
+    Key? key,
+    required this.category,
+    required this.controller,
+    required this.onChangedPage,
+    required this.onClickedOption,
   }) : super(key: key);
 
   @override
@@ -31,7 +31,7 @@ class QuestionsWidget extends StatelessWidget {
       );
 
   Widget buildQuestion({
-    @required Question question,
+    required Question question,
   }) =>
       Container(
         padding: const EdgeInsets.all(16),
